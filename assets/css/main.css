@@ -1,0 +1,51 @@
+nav.navbar{
+  background-color: #0078c5;
+  padding:35px;
+}
+nav.navbar a{
+  color:#fff;
+}
+/*
+  - Controladores de menu
+ */
+.dropdown .MaleDropDown, .dropdown .FemaleDropDown,
+  .dropdown .WhoDropDown{
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  padding: 14px 16px;
+}
+.ContentMale,.ContentFemale,.ContentWho{
+  display:none;
+  position:absolute;
+  min-width: 200px;
+  background-color: #0078c5;
+  padding:15px 10px;
+  border-top:4px solid #ffb200;
+  font-weight: bold;
+}
+/*
+ - Hovers de transições
+ */
+a.MaleDropDown:hover,a.FemaleDropDown:hover,
+  a.WhoDropDown:hover{
+  color:#ffb200;
+  transition-duration: 0.3s;
+  text-decoration: none;
+}
+.ContentMale>a:hover,.ContentFemale>a:hover,
+  .ContentWho>a:hover{
+  background: #44abe8;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  border-radius:5px;
+  background-color:rgba(255,255,255,0.1)
+}
+/*
+  - Mágica, acontece aqui
+ */
+.dropdown:hover .ContentMale,.ContentMale>a,
+  .dropdown:hover .ContentFemale,.ContentFemale>a,
+  .dropdown:hover .ContentWho,.ContentWho>a{
+  display:block;
+}
